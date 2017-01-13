@@ -1,11 +1,11 @@
 require 'test_helper'
 
 class RelevancyScoreTest < Minitest::Test
-  def test_that_it_has_a_version_number
-    refute_nil ::RelevancyScore::VERSION
+  def setup
+    @text = YAML.load_file('./test/files/text.yml')
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_that_it_returns_a_score
+    assert_equal(0.045, RelevancyScore::Calculate.new(text: @text, keyword: 'Jedi').score)
   end
 end
