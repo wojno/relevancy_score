@@ -6,4 +6,5 @@ before_install: gem install bundler -v 1.13.7
 cache: bundler
 addons:
   code_climate:
-    repo_token: <%= ENV['CODECLIMATE_COVERAGE_TOKEN'] %>
+    repo_token: 
+      secure: "bbcbuKTkHZ04ZM8XAdK5s526J494O0sV1f85APsFKe60QjumJYDGzxwUB1XOoCmFVyTJAIMaDLhWD4al0tXQRE/8foKShS0qBD0hVyz5peZBDKZ8ZgdNJ9bVPO2E/xXJhqGZnTuli756x7K0Qmw1I2Z+lq+wWU5W20uqaN+xo6RH0SCof8njjRJ3H+tetS6QQoFMspGzeoOBck1VrHIgZ3KzCu7Q9oEbxz/VIkmat2tKX4p0gg/uVOnx6A8va2sK0DqxsSkQAAlvCBwDuX+XdvWSyK2G/Vi1tZoVev38FlacQ2M7OGiGfirRYEVqAlEfBZCwiLNwwrv9ntHOo3Yvom57rFdUtaJ+wspYjPWwSBEXgLpLbLPBhfhqbS5ry/KWkm4iugPAXvqtsnUB6x6Dnm0z/jsDTd1P28oa4phIJvGSVPMMHxavbAJ+BrGDnj/L4GK1hwmi+rU8Yer8jtjvwOZJubGdBwsyRrKt0an/Ccsg0w1WJYDDXiOYZP2MitRX/lVQr0MFaUZZemroErt1EjxQqIhgIW/mU6e5Oa/y3ekrWOQAn9sbaqpIbvCUVc2ojFKtwZQEnyJXUcyUZOixdAJaynuIt9Ap139qDTCTLceizuQX3uJSLTIrIpxvIW+kYhLcnvz4ZQ+mcYwU6rDeYZXQrjCatSWMi3h7lXpsoow="
