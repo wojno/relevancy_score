@@ -1,5 +1,5 @@
 require 'yaml'
-Dir.glob('./lib/relevancy_score/*', &method(:require))
+Dir.glob('./lib/relevancy_score/*.rb', &method(:require))
 
 # Calculate the relevancy of a search term against a text blob
 module RelevancyScore
@@ -11,10 +11,14 @@ module RelevancyScore
     end
 
     def score
-      (frequency * title_score) / meaningful_word_count
+      calculate_score.round(5)
     end
 
     private
+
+    def calculate_score
+      (frequency * title_score) / meaningful_word_count
+    end
 
     def title_score
       WeightedTitle.new(title: @text[:title], keyword: @keyword).calculate
@@ -28,8 +32,9 @@ module RelevancyScore
     end
 
     def meaningful_word_count
-      # TODO : implement
-      100
+      MeaningfulWords.new(
+        text: @text.map{|_key, value| value}.join(' ')
+      ).count
     end
 
   end
