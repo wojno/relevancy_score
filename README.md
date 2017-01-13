@@ -1,5 +1,6 @@
 # RelevancyScore
 
+[![Build Status](https://travis-ci.org/wojno/relevancy_score.svg?branch=master)](https://travis-ci.org/wojno/relevancy_score)
 [![Test Coverage](https://codeclimate.com/github/wojno/relevancy_score/badges/coverage.svg)](https://codeclimate.com/github/wojno/relevancy_score/coverage)
 
 Simple algorithm to return a relevancy score for a blob of text based upon the provided keyword.
